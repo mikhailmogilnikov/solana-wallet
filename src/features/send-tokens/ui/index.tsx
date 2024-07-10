@@ -1,3 +1,5 @@
+'use client';
+
 import { ReactNode, useState } from 'react';
 
 import { ESendTokensStages } from '../model/stages.enum';
