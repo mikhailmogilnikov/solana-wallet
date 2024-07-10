@@ -14,7 +14,7 @@ export const Header = () => {
 
   return (
     <Flex className='h-16 border-b-1 border-b-divider' tag='nav'>
-      <Flex center className='max-w-6xl mx-auto px-4'>
+      <Flex center className='max-w-6xl mx-auto px-4' gap={0}>
         <Flex>
           {pathname === '/transaction' && (
             <Button isIconOnly radius='full' size='sm' onPress={() => back()}>

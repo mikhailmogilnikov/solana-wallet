@@ -26,7 +26,12 @@ export const Balance = () => {
       </Text>
 
       {wallet ? (
-        <Text className='leading-3' opacity={0.5} size={15} tag='h2'>
+        <Text
+          className='leading-3 text-center text-nowrap'
+          opacity={0.5}
+          size={15}
+          tag='h2'
+        >
           {balance} SOL{' '}
           {rateToUsd && balance ? <span>~ ${balance * rateToUsd}</span> : null}
         </Text>
