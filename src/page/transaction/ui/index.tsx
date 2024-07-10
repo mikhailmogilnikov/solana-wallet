@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 import { getBalance, sendTransaction, IWallet } from '@/src/entities/wallet';
+import { SendTokensForm } from '@/src/features/send-tokens';
 
 export const TransactionPage = () => {
   const router = useRouter();
@@ -37,6 +38,7 @@ export const TransactionPage = () => {
 
   return (
     <div>
+      <SendTokensForm />
       <div>
         <input
           placeholder='Кол-во SOL'

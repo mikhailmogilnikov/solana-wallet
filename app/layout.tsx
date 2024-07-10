@@ -45,9 +45,9 @@ export default function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
-          <div className='relative flex flex-col h-dvh'>
+          <div className='relative flex flex-col'>
             <Header />
-            <main className='w-full h-full overflow-y-scroll p-4 max-w-6xl mx-auto'>
+            <main className='w-full h-full p-4 max-w-6xl mx-auto'>
               {children}
             </main>
           </div>

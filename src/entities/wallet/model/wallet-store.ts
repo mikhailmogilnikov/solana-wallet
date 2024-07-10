@@ -9,9 +9,11 @@ export type TProjectStatusStore = {
   wallet?: IWallet | null;
   balance?: number;
   fromKeypair?: Keypair;
+  rateToUsd?: number;
   setWallet: (wallet: IWallet | null) => void;
   setBalance: (balance: number) => void;
   setFromKeypair: (fromKeypair: Keypair) => void;
+  setRateToUsd: (rate: number) => void;
 };
 
 export const useWalletStore = create<TProjectStatusStore>()(
@@ -20,6 +22,7 @@ export const useWalletStore = create<TProjectStatusStore>()(
       wallet: undefined,
       balance: undefined,
       fromKeypair: undefined,
+      rateToUsd: undefined,
 
       setWallet: (wallet: IWallet | null) =>
         set((state) => {
@@ -32,6 +35,10 @@ export const useWalletStore = create<TProjectStatusStore>()(
       setFromKeypair: (fromKeypair: Keypair) =>
         set((state) => {
           state.fromKeypair = fromKeypair;
+        }),
+      setRateToUsd: (rate: number) =>
+        set((state) => {
+          state.rateToUsd = rate;
         }),
     })),
   ),

@@ -9,6 +9,7 @@ import { HomeSkeleton } from './skeleton';
 import { useWallet } from '@/src/entities/wallet';
 import { Flex } from '@/src/shared/ui/flex';
 import { Dashboard } from '@/src/widgets/dashboard';
+import { Text } from '@/src/shared/ui/text';
 
 export const HomePage = () => {
   const { wallet } = useWallet();
@@ -24,6 +25,11 @@ export const HomePage = () => {
       <Dashboard />
     </Flex>
   ) : (
-    <Flex>Создайте кошелек</Flex>
+    <Flex center col className='mt-10' gap={0}>
+      <Text size={20}>У вас пока нет кошелька</Text>
+      <Text opacity={0.5} size={15}>
+        Сгенерируйте его, нажав на кнопку сверху
+      </Text>
+    </Flex>
   );
 };
