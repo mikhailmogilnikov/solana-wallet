@@ -1,0 +1,39 @@
+import { Skeleton } from '@nextui-org/skeleton';
+
+import { useWallet } from '../model/wallet-store';
+
+import { Text } from '@/src/shared/ui/text';
+import { Flex } from '@/src/shared/ui/flex';
+
+export const Balance = () => {
+  const { wallet, balance } = useWallet();
+
+  if (typeof wallet === 'undefined' && typeof balance === 'undefined') {
+    return (
+      <Flex center col gap={2}>
+        <Text className='leading-3' tag='h2' weight={600}>
+          Баланс
+        </Text>
+        <Skeleton className='w-12 h-3 rounded-md' />
+      </Flex>
+    );
+  }
+
+  return (
+    <Flex center col gap={2}>
+      <Text className='leading-3' tag='h1' weight={600}>
+        Баланс
+      </Text>
+
+      {wallet ? (
+        <Text className='leading-3' opacity={0.5} size={15} tag='h2'>
+          {balance} SOL
+        </Text>
+      ) : (
+        <Text className='leading-3 italic' opacity={0.5} size={15} tag='h2'>
+          Создайте кошелек
+        </Text>
+      )}
+    </Flex>
+  );
+};
