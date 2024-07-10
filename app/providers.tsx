@@ -7,7 +7,7 @@ import { ThemeProvider as NextThemesProvider } from 'next-themes';
 import { ThemeProviderProps } from 'next-themes/dist/types';
 import { LazyMotion } from 'framer-motion';
 
-import { WalletProvider } from '@/src/entities/wallet/lib/wallet-provider';
+import { WalletProvider } from '@/src/entities/wallet';
 
 export interface ProvidersProps {
   children: React.ReactNode;

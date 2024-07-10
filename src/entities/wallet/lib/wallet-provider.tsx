@@ -9,5 +9,5 @@ type Props = {
 export const WalletProvider = ({ children }: Props) => {
   useSetupWallet();
 
-  return children;
+  return <>{children}</>;
 };
