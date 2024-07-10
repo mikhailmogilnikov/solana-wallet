@@ -36,7 +36,12 @@ export const Balance = () => {
           {rateToUsd && balance ? <span>~ ${balance * rateToUsd}</span> : null}
         </Text>
       ) : (
-        <Text className='leading-3 italic' opacity={0.5} size={15} tag='h2'>
+        <Text
+          className='leading-3 italic text-center text-nowrap'
+          opacity={0.5}
+          size={15}
+          tag='h2'
+        >
           Создайте кошелек
         </Text>
       )}
