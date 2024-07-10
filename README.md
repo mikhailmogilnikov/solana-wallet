@@ -1,6 +1,6 @@
 # Solana Wallet Application
 
-[https://solana-wallet-neon.vercel.app](Link to live project)
+[Link to live project](https://solana-wallet-neon.vercel.app)
 
 This project is a simple Solana wallet application built with Next.js and solana-web3.js. It allows users to create a wallet, view their balance, and send transactions on the Solana devnet.
 
